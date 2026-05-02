@@ -1,8 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Package } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const mainServices = [
   {
@@ -24,9 +24,8 @@ const mainServices = [
     imageLeft: true,
     titles: [
       {
-        icon: Package,
         title: "Varaosat",
-        description: "Alkuperäiset ja laadukkaat tarvikeosat kauttamme. Kysy tarjous!\nKauttamme joko alkuperäiset varaosat tai hyväksi todetut laadukkaat tarvikeosat.",
+        description: "Kauttamme laadukkaat uudet alkuperäisosat tai hyväksi todetut tarvikeosat. Meiltä saat myös alkuperäiset Volvo Penta osat ja vetolaitteet.  ",
       },
     ],
     image: "/volvo.penta.öljyfiltteri.webp",
@@ -68,8 +67,7 @@ export function Services() {
                 {service.titles.map((item, i) => (
                   <div key={i} className={i > 0 ? 'mt-8' : ''}>
                     <div className="flex items-center gap-3 mb-3">
-                      {'icon' in item && item.icon && <item.icon className="w-7 h-7 text-blue-400/50 flex-shrink-0" />}
-                      <h3 className={`font-semibold text-white ${service.large ? 'text-3xl md:text-5xl' : 'text-2xl md:text-3xl'}`}>
+                      <h3 className="font-semibold text-white text-3xl md:text-5xl">
                         {item.title}
                       </h3>
                     </div>
@@ -78,11 +76,41 @@ export function Services() {
                     </p>
                   </div>
                 ))}
+                {index === 0 && (
+                  <div className="flex justify-end -mt-10">
+                    <Link
+                      href="/huollot"
+                      className="px-8 py-4 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/90 transition-colors hover:scale-105"
+                    >
+                      Lue lisää
+                    </Link>
+                  </div>
+                )}
+                {index === 1 && (
+                  <div className="flex justify-end mt-6 pr-20">
+                    <a
+                      href="#contact"
+                      className="px-8 py-4 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/90 transition-colors hover:scale-105"
+                    >
+                      Pyydä tarjous
+                    </a>
+                  </div>
+                )}
                 {'subService' in service && service.subService && (
                   <div className="mt-8">
                     <h4 className="text-xl font-semibold mb-2 text-white">
                       {service.subService.title}
                     </h4>
+                  </div>
+                )}
+                {index === 2 && (
+                  <div className="flex justify-end mt-6 pr-20">
+                    <a
+                      href="#contact"
+                      className="px-8 py-4 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/90 transition-colors hover:scale-105"
+                    >
+                      Pyydä tarjous
+                    </a>
                   </div>
                 )}
               </div>
@@ -100,6 +128,12 @@ export function Services() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-8 border-t border-white/10 pt-8">
+          <p className="text-white text-2xl md:text-3xl font-semibold">
+            Veneiden talvisäilytys kauttamme, kysy lisää!
+          </p>
         </div>
 
       </div>

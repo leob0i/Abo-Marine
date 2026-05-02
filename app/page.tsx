@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
-import { Pricing } from "@/components/pricing"
 import { CompanyInfo } from "@/components/company-info"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
@@ -20,8 +19,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Services />
-        <Pricing />
-        <CompanyInfo />
+<CompanyInfo />
         <ContactForm />
       </div>
 

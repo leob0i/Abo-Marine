@@ -20,7 +20,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-gradient"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-gradient pt-6 pb-2"
         >
           Åbo Marine Service Oy
         </motion.h1>

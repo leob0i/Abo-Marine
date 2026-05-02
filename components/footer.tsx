@@ -14,6 +14,7 @@ export function Footer() {
             <p className="text-white/50 leading-relaxed">
               Åbo Marine Service Oy – Liikkuva veneiden ja venemoottoreiden huoltopalvelu Turun alueella.
             </p>
+            <p className="text-white/35 text-sm mt-1">Y-tunnus 3435525-6</p>
           </div>
 
           <div>
@@ -56,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-sm text-white/40">
-          <p>&copy; 2025 Åbo Marine Service Oy. Kaikki oikeudet pidätetään.</p>
+          <p>&copy; 2026 Åbo Marine Service Oy. Kaikki oikeudet pidätetään.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-white transition-colors">Tietosuoja</Link>
             <Link href="#" className="hover:text-white transition-colors">Käyttöehdot</Link>
