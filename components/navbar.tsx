@@ -17,9 +17,10 @@ export function Navbar() {
   })
 
   const navLinks = [
-    { name: "Palvelut", href: "#services" },
+    { name: "Palvelut", href: "/#services" },
     { name: "Huollot ja korjaukset", href: "/huollot" },
     { name: "Meistä", href: "/meista" },
+    { name: "Työmme kuvina", href: "/meista#galleria" },
   ]
 
   return (

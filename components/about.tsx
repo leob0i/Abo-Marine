@@ -93,7 +93,7 @@ export function About() {
           transition={{ duration: 0.7, delay: 0.55 }}
           className="mt-6"
         >
-          <h2 className="relative z-20 text-2xl font-semibold text-white mb-8">Työmme kuvina</h2>
+          <h2 id="galleria" className="relative z-20 text-2xl font-semibold text-white mb-8">Työmme kuvina</h2>
           <div className="grid grid-cols-3 gap-4">
           {[
             "/konehuone.vihreä.jpg",

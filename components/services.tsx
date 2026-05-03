@@ -77,20 +77,20 @@ export function Services() {
                   </div>
                 ))}
                 {index === 0 && (
-                  <div className="flex justify-end -mt-10">
+                  <div className="flex justify-center mt-6">
                     <Link
                       href="/huollot"
-                      className="px-8 py-4 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/90 transition-colors hover:scale-105"
+                      className="px-6 py-3 rounded-full bg-white text-black text-base font-semibold hover:bg-white/90 transition-colors hover:scale-105"
                     >
                       Lue lisää
                     </Link>
                   </div>
                 )}
                 {index === 1 && (
-                  <div className="flex justify-end mt-6 pr-20">
+                  <div className="flex justify-center mt-6">
                     <a
                       href="#contact"
-                      className="px-8 py-4 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/90 transition-colors hover:scale-105"
+                      className="px-6 py-3 rounded-full bg-white text-black text-base font-semibold hover:bg-white/90 transition-colors hover:scale-105"
                     >
                       Pyydä tarjous
                     </a>
@@ -104,10 +104,10 @@ export function Services() {
                   </div>
                 )}
                 {index === 2 && (
-                  <div className="flex justify-end mt-6 pr-20">
+                  <div className="flex justify-center mt-6">
                     <a
                       href="#contact"
-                      className="px-8 py-4 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/90 transition-colors hover:scale-105"
+                      className="px-6 py-3 rounded-full bg-white text-black text-base font-semibold hover:bg-white/90 transition-colors hover:scale-105"
                     >
                       Pyydä tarjous
                     </a>

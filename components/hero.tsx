@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <Image
-        src="/herevene.webp"
+        src="/herevene1.jpg"
         alt="Vene"
         fill
         className="object-cover object-center"
