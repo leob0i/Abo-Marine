@@ -94,7 +94,7 @@ export function About() {
           className="mt-6"
         >
           <h2 id="galleria" className="relative z-20 text-2xl font-semibold text-white mb-8">Työmme kuvina</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
             "/konehuone.vihreä.jpg",
             "/puhdaskonetila.JPG",

@@ -55,9 +55,9 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors">
+            <Link href="/#contact" className="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-white/90 transition-colors">
               Ota yhteyttä
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -109,12 +109,13 @@ export function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.32, duration: 0.25 }}
                 >
-                  <button
+                  <Link
+                    href="/#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="w-full bg-white text-black py-4 rounded-full text-xl font-semibold"
+                    className="w-full block text-center bg-white text-black py-4 rounded-full text-xl font-semibold"
                   >
                     Ota yhteyttä
-                  </button>
+                  </Link>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 16 }}

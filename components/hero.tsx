@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -31,7 +32,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="text-2xl md:text-3xl font-light text-white/70 mb-8 tracking-wide"
         >
-          Liikkuva huoltopalvelu
+          Venehuoltoa Turun alueella
         </motion.p>
 
         <motion.p
@@ -40,8 +41,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella.
-          Tulemme luoksesi – huolto siellä missä venettä säilytetään.
+          Ammattitaitoista veneiden ja venemoottoreiden huoltoa 20 vuoden kokemuksella.
+          Tulemme luoksesi, siellä missä venettä säilytetään.
         </motion.p>
 
         <motion.div
@@ -56,9 +57,9 @@ export function Hero() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
-          <button className="px-8 py-4 glass rounded-full font-semibold text-lg text-white hover:bg-white/10 transition-all hover:scale-105">
+          <Link href="#contact" className="px-8 py-4 glass rounded-full font-semibold text-lg text-white hover:bg-white/10 transition-all hover:scale-105">
             Ota yhteyttä
-          </button>
+          </Link>
         </motion.div>
       </div>
 

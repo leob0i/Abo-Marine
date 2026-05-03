@@ -25,7 +25,7 @@ export default function HuollotPage() {
             src="/vene.keula.webp"
             alt=""
             fill
-            className="object-cover opacity-65"
+            className="object-cover object-[75%_50%] md:object-center opacity-65"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/80" />
@@ -52,22 +52,6 @@ export default function HuollotPage() {
           </div>
         </div>
 
-        {/* Osuus 1 – intro */}
-        <section className="py-8 relative">
-          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black to-transparent pointer-events-none z-0" />
-          <div className="container mx-auto px-6 max-w-5xl relative z-10">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="text-xl md:text-2xl text-white leading-snug text-center"
-            >
-              Veneesi ansaitsee yhtä hyvää huoltoa kuin sinäkin. Åbo Marine Service Oy tulee luoksesi – oli veneesi sitten vedessä tai maalla, satamassa tai talviteloilla. Palvelemme yksityisiä veneenomistajia sekä ammattiliikennettä Turun alueella, lähikunnissa ja saaristossa lähes 20 vuoden kokemuksella.
-            </motion.p>
-          </div>
-        </section>
-
         {/* Osuus 2 – Kaikki merkit */}
         <section className="py-20">
           <div className="container mx-auto px-6 max-w-5xl">
@@ -80,7 +64,7 @@ export default function HuollotPage() {
                 className="md:row-start-1 md:col-start-1"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Kaikki merkit – yksi palveluntarjoaja
+                  Korjaukset ja huollot merkistä riippumatta
                 </h2>
                 <p className="text-white/80 text-lg leading-relaxed">
                   Huollamme ja korjaamme kaikkien merkkien veneitä – moottorityypistä tai iästä riippumatta. Ammattitaitoinen mekaanikkimme hoitaa niin arkiset huollot kuin vaativatkin korjaukset paikan päällä.
@@ -209,6 +193,21 @@ export default function HuollotPage() {
                 </div>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* Osuus 1 – intro */}
+        <section className="py-8 relative">
+          <div className="container mx-auto px-6 max-w-5xl relative z-10">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="text-2xl md:text-3xl text-white leading-snug text-center"
+            >
+              Veneesi ansaitsee yhtä hyvää huoltoa kuin sinäkin. Palvelemme yksityisiä veneenomistajia sekä ammattiliikennettä Turun alueella, lähikunnissa ja saaristossa lähes 20 vuoden kokemuksella.
+            </motion.p>
           </div>
         </section>
 

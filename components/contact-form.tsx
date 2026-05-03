@@ -39,7 +39,8 @@ export function ContactForm() {
           transition={{ delay: 0.1 }}
           className="text-white/60 text-center mb-12 text-lg"
         >
-          Täytä lomake ja otamme yhteyttä mahdollisimman pian.
+          Täytä lomake ja otamme yhteyttä mahdollisimman pian.<br />
+          Kiireellisissä tapauksissa voit soittaa meille numeroon +358 50 351 1512
         </motion.p>
 
         {sent ? (
