@@ -31,8 +31,10 @@ export function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-          isScrolled ? "py-4" : "py-6"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6",
+          isScrolled
+            ? "pt-[calc(env(safe-area-inset-top,0px)+1rem)] pb-4"
+            : "pt-[calc(env(safe-area-inset-top,0px)+1.5rem)] pb-6"
         )}
       >
         <div
