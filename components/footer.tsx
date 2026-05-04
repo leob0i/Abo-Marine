@@ -59,8 +59,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-sm text-white/40">
           <p>&copy; 2026 Åbo Marine Service Oy. Kaikki oikeudet pidätetään.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-white transition-colors">Tietosuoja</Link>
-            <Link href="#" className="hover:text-white transition-colors">Käyttöehdot</Link>
+            <Link href="/tietosuoja" className="hover:text-white transition-colors">Tietosuoja ja käyttöehdot</Link>
           </div>
         </div>
       </div>
