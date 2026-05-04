@@ -42,7 +42,7 @@ export function Hero() {
           className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           Ammattitaitoista veneiden ja venemoottoreiden huoltoa 20 vuoden kokemuksella.
-          Tulemme luoksesi, siellä missä venettä säilytetään.
+          Korjaukset, huollot, varaosat ja kuljetus.
         </motion.p>
 
         <motion.div
@@ -51,14 +51,14 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <button className="group relative px-8 py-4 bg-white text-black rounded-full font-semibold text-lg overflow-hidden transition-all hover:scale-105">
+          <a href="tel:+358503511512" className="px-8 py-4 glass rounded-full font-semibold text-lg text-white hover:bg-white/10 transition-all hover:scale-105">
+            Soita
+          </a>
+          <Link href="/huollot#merella" className="group relative px-8 py-4 bg-white text-black rounded-full font-semibold text-lg overflow-hidden transition-all hover:scale-105">
             <span className="relative z-10 flex items-center gap-2">
-              Katso palvelut <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              Jumissa merellä? <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
-          </button>
-          <Link href="#contact" className="px-8 py-4 glass rounded-full font-semibold text-lg text-white hover:bg-white/10 transition-all hover:scale-105">
-            Ota yhteyttä
           </Link>
         </motion.div>
       </div>

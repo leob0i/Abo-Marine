@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
 import { Wrench, Star, Shield } from "lucide-react"
+import { SeaService } from "@/components/sea-service"
 
 export default function HuollotPage() {
   return (
@@ -46,11 +47,32 @@ export default function HuollotPage() {
                 className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mt-6 leading-relaxed"
               >
                 Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella.
-                Tulemme luoksesi – huolto siellä missä venettä säilytetään.
+                Tulemme luoksesi maalla sekä merellä!
               </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+              >
+                <a
+                  href="tel:+358503511512"
+                  className="px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:scale-105 transition-all"
+                >
+                  Soita
+                </a>
+                <a
+                  href="#contact"
+                  className="px-8 py-4 glass rounded-full font-semibold text-lg text-white hover:bg-white/10 transition-all hover:scale-105"
+                >
+                  Pyydä tarjous
+                </a>
+              </motion.div>
             </motion.div>
           </div>
         </div>
+
+        <SeaService />
 
         {/* Osuus 2 – Kaikki merkit */}
         <section className="py-20">
@@ -67,8 +89,17 @@ export default function HuollotPage() {
                   Korjaukset ja huollot merkistä riippumatta
                 </h2>
                 <p className="text-white/80 text-lg leading-relaxed">
-                  Huollamme ja korjaamme kaikkien merkkien veneitä – moottorityypistä tai iästä riippumatta. Ammattitaitoinen mekaanikkimme hoitaa niin arkiset huollot kuin vaativatkin korjaukset paikan päällä.
+                  Huollamme ja korjaamme kaiken merkkisiä veneitä, moottorityypistä tai iästä riippumatta. Ammattitaitoinen mekaanikkimme hoitaa niin arkiset huollot kuin vaativatkin korjaukset paikan päällä yli 20 vuoden kokemuksella.
                 </p>
+                <div className="flex items-center gap-4 mt-6">
+                  <span className="text-white/70 text-base">Kaikki työt hinnoitellaan tapauskohtaisesti</span>
+                  <a
+                    href="#contact"
+                    className="px-4 py-2 rounded-full bg-white hover:bg-white/90 text-black font-semibold text-sm transition-colors whitespace-nowrap"
+                  >
+                    Pyydä tarjous
+                  </a>
+                </div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 24 }}
@@ -91,10 +122,6 @@ export default function HuollotPage() {
                 transition={{ duration: 0.7, delay: 0.15 }}
                 className="md:row-start-2 md:col-start-1"
               >
-                <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/5 border border-white/10">
-                  <Wrench className="w-5 h-5 text-blue-400" />
-                  <span className="text-white font-semibold">Tuntihinta alkaen 91 €</span>
-                </div>
               </motion.div>
             </div>
           </div>
@@ -163,7 +190,7 @@ export default function HuollotPage() {
                   Yanmar – huolto ja korjaus
                 </h2>
                 <p className="text-white/80 text-lg leading-relaxed">
-                  Yanmar-moottoreiden huolto sujuu meiltä yhtä ammattitaidolla. Vuosihuolto pitää Yannmarin virittyneen ja luotettavana koko kauden ajan.
+                  Yanmar-moottoreiden huolto sujuu meiltä yhtä ammattitaidolla. Vuosihuolto pitää Yanmarin virittyneenä ja luotettavana koko kauden ajan.
                 </p>
               </motion.div>
               <motion.div
@@ -206,32 +233,12 @@ export default function HuollotPage() {
               transition={{ duration: 0.7 }}
               className="text-2xl md:text-3xl text-white leading-snug text-center"
             >
-              Veneesi ansaitsee yhtä hyvää huoltoa kuin sinäkin. Palvelemme yksityisiä veneenomistajia sekä ammattiliikennettä Turun alueella, lähikunnissa ja saaristossa lähes 20 vuoden kokemuksella.
+              Veneesi ansaitsee yhtä hyvää huoltoa kuin sinäkin. Palvelemme yksityisiä veneenomistajia sekä ammattiliikennettä Turun alueella, lähikunnissa ja saaristossa yli 20 vuoden kokemuksella.
             </motion.p>
           </div>
         </section>
 
-        {/* Osuus 5 – Hinnoittelu */}
-        <section className="py-20">
-          <div className="container mx-auto px-6 max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="rounded-2xl bg-white/5 border border-white/10 px-8 py-10 text-center"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Hinnoittelu ja yhteistyö
-              </h2>
-              <p className="text-white/80 text-lg leading-relaxed">
-                Kaikki työt hinnoitellaan tapauskohtaisesti – pyydä meiltä tarjous, niin kerromme selkeän arvion ennen töiden aloitusta. Palvelemme myös ammattiliikennettä: satamat, laivausyhtiöt ja muut alan toimijat – kysy lisää yhteistyöstä.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        <ContactForm />
+<ContactForm />
       </div>
 
       <Footer />

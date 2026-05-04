@@ -14,16 +14,16 @@ export function Footer() {
             <p className="text-white/50 leading-relaxed">
               Åbo Marine Service Oy – Liikkuva veneiden ja venemoottoreiden huoltopalvelu Turun alueella.
             </p>
-            <p className="text-white/35 text-sm mt-1">Y-tunnus 3435525-6</p>
+            <p className="text-white/35 mt-4">Y-tunnus 3435525-6</p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-6">Sivukartta</h4>
             <ul className="space-y-4 text-white/60">
-              <li><Link href="#work" className="hover:text-white transition-colors">Referenssit</Link></li>
+              <li><Link href="/meista#galleria" className="hover:text-white transition-colors">Referenssit</Link></li>
               <li><Link href="#services" className="hover:text-white transition-colors">Palvelut</Link></li>
-              <li><Link href="#about" className="hover:text-white transition-colors">Tietoa</Link></li>
-              <li><Link href="#contact" className="hover:text-white transition-colors">Yhteystiedot</Link></li>
+              <li><Link href="/meista" className="hover:text-white transition-colors">Meistä</Link></li>
+              <li><Link href="/huollot#merella" className="hover:text-white transition-colors">Huoltovene</Link></li>
             </ul>
           </div>
 

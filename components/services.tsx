@@ -77,10 +77,10 @@ export function Services() {
                   </div>
                 ))}
                 {index === 0 && (
-                  <div className="flex justify-center mt-6">
+                  <div className="mt-6 flex justify-center">
                     <Link
                       href="/huollot"
-                      className="px-6 py-3 rounded-full bg-white text-black text-base font-semibold hover:bg-white/90 transition-colors hover:scale-105"
+                      className="md:ml-[300px] px-6 py-3 rounded-full bg-white text-black text-base font-semibold hover:bg-white/90 transition-colors hover:scale-105"
                     >
                       Lue lisää
                     </Link>
