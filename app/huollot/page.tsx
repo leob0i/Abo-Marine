@@ -190,7 +190,7 @@ export default function HuollotPage() {
                   Yanmar – huolto ja korjaus
                 </h2>
                 <p className="text-white/80 text-lg leading-relaxed">
-                  Yanmar-moottoreiden huolto sujuu meiltä yhtä ammattitaidolla. Vuosihuolto pitää Yanmarin virittyneenä ja luotettavana koko kauden ajan.
+                  Yanmar-moottoreiden huolto sujuu meiltä yhtä ammattitaitoisesti. Vuosihuolto pitää Yanmarin virittyneenä ja luotettavana koko kauden ajan.
                 </p>
               </motion.div>
               <motion.div

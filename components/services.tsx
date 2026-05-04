@@ -14,7 +14,7 @@ const mainServices = [
       },
       {
         title: "Huolto ja ennakoiva ylläpito",
-        description: "Pidä veneesi kunnossa ennen kuin ongelmat syntyvät. Teemme perä- ja sisämoottoreiden määräaikaishuollot valmistajien ohjelman mukaan tai räätälöitynä juuri sinun käyttöön.",
+        description: "Pidä veneesi kunnossa ennen kuin ongelmat syntyvät. Teemme perä- ja sisämoottoreiden määräaikaishuollot valmistajien ohjelman mukaan tai räätälöitynä juuri sinun käyttöösi.",
       },
     ],
     image: "/venekone.webp",
@@ -40,7 +40,7 @@ const mainServices = [
       },
     ],
     subService: {
-      title: "Siirtoajot merellä onnistuu myös!",
+      title: "Siirtoajot merellä onnistuvat myös!",
       description: "",
     },
     image: "/traileri.webp",

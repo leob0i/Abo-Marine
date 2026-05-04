@@ -15,10 +15,10 @@ export function SeaService() {
           Pääsemme luoksesi nopeasti myös merellä.
         </p>
         <p className="text-white/70 text-base md:text-lg leading-relaxed">
-          Huoltoveneemme avulla tulemme nopeasti paikanpäälle Turun saariston
+          Huoltoveneemme avulla tulemme nopeasti paikan päälle Turun saariston
           alueella. Korjaamme veneesi paikanpäällä tai kuljetamme tarvittaessa
           veneesi rantaan lisätöitä varten. Huoltoveneemme päivystää
-          kellonympäri ja olemme aina valmiit auttamaan! Kiireellisissä
+          kellon ympäri ja olemme aina valmiit auttamaan! Kiireellisissä
           tapauksissa soita meille numeroon{" "}
           <a
             href="tel:+358503511512"

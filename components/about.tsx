@@ -48,13 +48,13 @@ export function About() {
               yksityisiä veneenomistajia, yrityksiä sekä ammattiliikennettä Turun ja saariston alueella.
             </p>
             <p>
-              Lähes 20 vuoden kokemuksella hoidamme huollot ja korjaukset siellä missä veneesi on —
+              Jopa 20 vuoden kokemuksella hoidamme huollot ja korjaukset siellä missä veneesi on —
               liikkuvana huoltopalveluna. Meille tärkeintä on työn laatu, luotettavuus ja asiakkaan
               tarpeiden ymmärtäminen. Jokainen huolto ja korjaus tehdään huolellisesti, jotta veneesi
               toimii moitteettomasti koko veneilykauden ajan.
             </p>
             <p>
-              Käytössämme laadukkaat Jaltest-diagnoosilaitteet.
+              Käytössämme on laadukkaat Jaltest-diagnoosilaitteet.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
