@@ -1,75 +1,165 @@
-import type { Metadata, Viewport } from "next"
-import { Inter } from 'next/font/google'
-import "./globals.css"
-import { cn } from "@/lib/utils"
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-const BASE_URL = "https://abomarineservice.com"
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-export const viewport: Viewport = {
-  viewportFit: "cover",
-}
+// ─── GLOBAALI METADATA ──────────────────────────────────────────────────────
+// Jokainen sivu perii tämän. Per-sivu metadata (page.tsx) ylikirjoittaa tarvittaessa.
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  // title.template näkyy alasivuilla: "Huollot ja korjaukset | Åbo Marine Service"
   title: {
-    default: "Åbo Marine Service Oy | Venehuolto Turku",
+    default: "Åbo Marine Service Oy – Liikkuva venehuolto Turku",
     template: "%s | Åbo Marine Service Oy",
   },
-  description: "Liikkuva veneiden ja venemoottoreiden huoltopalvelu Turun alueella. Lähes 20 vuoden kokemus. Tule luoksemme tai me tulemme sinulle.",
-  keywords: ["venehuolto", "Turku", "venekorjaamo", "venehuolto Turku", "venemoottori huolto", "liikkuva venehuolto"],
+  description:
+    "Ammattitaitoista veneiden ja venemoottoreiden huoltoa sekä korjausta Turun alueella. Liikkuva palvelu – tulemme sinne missä veneesi on. Volvo Penta, Yanmar, Yamaha ja muut merkit. Lähes 20 vuoden kokemus.",
+  keywords: [
+    "venehuolto Turku",
+    "venekorjaus Turku",
+    "liikkuva venehuolto",
+    "venemoottori huolto",
+    "Volvo Penta huolto Turku",
+    "Yanmar huolto Turku",
+    "venehuolto Kaarina",
+    "venehuolto Naantali",
+    "venehuolto Raisio",
+    "veneiden talvisäilytys Turku",
+    "veneen nosto ja kuljetus",
+    "Åbo Marine Service",
+    "merialan huolto Turku",
+  ],
   authors: [{ name: "Åbo Marine Service Oy" }],
   creator: "Åbo Marine Service Oy",
   publisher: "Åbo Marine Service Oy",
+
+  // Canonical URL — tärkeä kun domainilla on useita versioita (www / ei-www / vercel)
+  alternates: {
+    canonical: "https://www.abomarineservice.com",
+  },
+
+  // Open Graph — Facebook, LinkedIn, WhatsApp esikatselut
+  openGraph: {
+    type: "website",
+    locale: "fi_FI",
+    url: "https://www.abomarineservice.com",
+    siteName: "Åbo Marine Service Oy",
+    title: "Åbo Marine Service Oy – Liikkuva venehuolto Turku",
+    description:
+      "Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella. Liikkuva palvelu lähes 20 vuoden kokemuksella. Volvo Penta, Yanmar, Yamaha ja muut merkit.",
+    images: [
+      {
+        url: "https://www.abomarineservice.com/og-image.jpg", // lisää 1200×630px kuva /public-kansioon
+        width: 1200,
+        height: 630,
+        alt: "Åbo Marine Service Oy – Liikkuva venehuolto Turku",
+      },
+    ],
+  },
+
+  // Twitter / X -kortti
+  twitter: {
+    card: "summary_large_image",
+    title: "Åbo Marine Service Oy – Liikkuva venehuolto Turku",
+    description:
+      "Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella lähes 20 vuoden kokemuksella.",
+    images: ["https://www.abomarineservice.com/og-image.jpg"],
+  },
+
+  // Robots: sallitaan indeksointi täysin
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
       "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-  openGraph: {
-    type: "website",
-    locale: "fi_FI",
-    url: BASE_URL,
-    siteName: "Åbo Marine Service Oy",
-    title: "Åbo Marine Service Oy | Venehuolto Turku",
-    description: "Liikkuva veneiden ja venemoottoreiden huoltopalvelu Turun alueella. Lähes 20 vuoden kokemus.",
-    images: [
-      {
-        url: "/og-image.jpg", // 1200x630px kuva
-        width: 1200,
-        height: 630,
-        alt: "Åbo Marine Service Oy – Venehuolto Turku",
-      },
-    ],
+
+  // Verification — lisää Google Search Console -koodi tähän kun saat sen
+  // verification: {
+  //   google: "GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE",
+  // },
+};
+
+// ─── JSON-LD RAKENNEPÄÄTELMÄ (LocalBusiness) ────────────────────────────────
+// Auttaa Googlen rich snippeteissä (yrityskortti hakutuloksissa)
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.abomarineservice.com",
+  name: "Åbo Marine Service Oy",
+  description:
+    "Liikkuva veneiden ja venemoottoreiden huolto- ja korjauspalvelu Turun alueella lähes 20 vuoden kokemuksella.",
+  url: "https://www.abomarineservice.com",
+  telephone: "+358503511512",
+  email: "info@abomarineservice.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Ravurinkatu 29",
+    postalCode: "20380",
+    addressLocality: "Turku",
+    addressCountry: "FI",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Åbo Marine Service Oy | Venehuolto Turku",
-    description: "Liikkuva veneiden ja venemoottoreiden huoltopalvelu Turun alueella.",
-    images: ["/og-image.jpg"],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 60.4518,
+    longitude: 22.2666,
   },
-  alternates: {
-    canonical: BASE_URL,
-  },
-}
+  areaServed: [
+    { "@type": "City", name: "Turku" },
+    { "@type": "City", name: "Kaarina" },
+    { "@type": "City", name: "Raisio" },
+    { "@type": "City", name: "Naantali" },
+  ],
+  priceRange: "€€",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+  ],
+  sameAs: [
+    "https://wa.me/358503511512",
+  ],
+};
+
+// ─── ROOT LAYOUT ─────────────────────────────────────────────────────────────
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="fi" className="dark">
-      <body className={cn("min-h-dvh bg-black font-sans antialiased selection:bg-white/20", inter.variable)}>
+    <html lang="fi">
+      <head>
+        {/* JSON-LD rakennepäätelmä */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
-  )
+  );
 }

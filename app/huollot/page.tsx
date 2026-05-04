@@ -8,6 +8,9 @@ import { ContactForm } from "@/components/contact-form"
 import { Wrench, Star, Shield } from "lucide-react"
 import { SeaService } from "@/components/sea-service"
 
+
+
+
 export default function HuollotPage() {
   return (
     <main className="min-h-screen bg-[#02091a] text-white selection:bg-blue-500/30">
