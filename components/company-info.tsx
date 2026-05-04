@@ -70,20 +70,26 @@ export function CompanyInfo() {
           <p className="text-white/40 text-sm uppercase tracking-widest mb-8">
             Huollot ja korjaukset onnistuvat niin maalla kuin merellä. Tuemme laajaa merkkivalikoimaa
           </p>
-
-          <div className="w-full overflow-hidden">
-            <div className="flex gap-6 animate-marquee whitespace-nowrap">
-              {[...brands, ...brands].map((brand, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center px-5 py-2.5 rounded-full border border-white/15 text-white/50 text-sm font-medium flex-shrink-0"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </div>
         </motion.div>
+      </div>
+
+      <div
+        className="w-full overflow-hidden"
+        style={{
+          maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+        }}
+      >
+        <div className="flex gap-6 animate-marquee whitespace-nowrap">
+          {[...brands, ...brands].map((brand, i) => (
+            <span
+              key={i}
+              className="inline-flex items-center px-5 py-2.5 rounded-full border border-white/15 text-white/50 text-sm font-medium flex-shrink-0"
+            >
+              {brand}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   )

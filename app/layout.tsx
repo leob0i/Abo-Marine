@@ -59,3 +59,17 @@ export const metadata: Metadata = {
     canonical: BASE_URL,
   },
 }
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="fi" className="dark">
+      <body className={cn("min-h-dvh bg-black font-sans antialiased selection:bg-white/20", inter.variable)}>
+        {children}
+      </body>
+    </html>
+  )
+}
