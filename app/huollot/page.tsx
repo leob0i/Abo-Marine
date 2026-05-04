@@ -24,7 +24,7 @@ export default function HuollotPage() {
         <div className="relative pt-52 pb-48 overflow-hidden">
           <Image
             src="/vene.keula.webp"
-            alt=""
+            alt="Venehuolto ja korjaus Turussa – Åbo Marine Service Oy"
             fill
             className="object-cover object-[75%_50%] md:object-center opacity-65"
             priority
@@ -46,7 +46,7 @@ export default function HuollotPage() {
                 transition={{ duration: 0.7, delay: 0.15 }}
                 className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mt-6 leading-relaxed"
               >
-                Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella.
+                Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella. Volvo Penta, Yanmar, Yamaha ja muut merkit.
                 Tulemme luoksesi maalla sekä merellä!
               </motion.p>
               <motion.div

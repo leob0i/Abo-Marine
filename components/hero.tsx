@@ -10,30 +10,31 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <Image
         src="/herevene1.jpg"
-        alt="Vene"
+        alt="Liikkuva venehuolto Turussa – Åbo Marine Service Oy"
         fill
         className="object-cover object-center"
         priority
       />
       <div className="absolute inset-0 bg-black/55" />
       <div className="container mx-auto px-6 relative z-10 text-center">
-        <motion.h1
+
+        <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-gradient pt-6 pb-2"
         >
           Åbo Marine Service Oy
-        </motion.h1>
+        </motion.p>
 
-        <motion.p
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           className="text-2xl md:text-3xl font-light text-white/70 mb-8 tracking-wide"
         >
-          Venehuoltoa Turun alueella
-        </motion.p>
+          Liikkuva venehuolto ja -korjaus Turussa
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -62,7 +63,6 @@ export function Hero() {
           </Link>
         </motion.div>
       </div>
-
     </section>
   )
 }
