@@ -29,11 +29,12 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold mb-6">Palvelualue</h4>
-            <ul className="space-y-4 text-white/60">
-              <li>Turku</li>
+            <ul className="space-y-2 text-white/60">
+              <li>Turku + saaristo</li>
               <li>Kaarina</li>
               <li>Raisio</li>
               <li>Naantali</li>
+              <li>Parainen</li>
             </ul>
           </div>
 
