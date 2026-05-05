@@ -6,19 +6,39 @@ import { Send } from "lucide-react"
 
 export function ContactForm() {
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    setLoading(true)
+    setError(null)
     const form = e.currentTarget
     const data = new FormData(form)
-    const nimi = data.get("nimi")
-    const puhelin = data.get("puhelin")
-    const email = data.get("email")
-    const viesti = data.get("viesti")
 
-    const body = `Nimi: ${nimi}%0APuhelin: ${puhelin}%0ASähköposti: ${email}%0A%0AViesti:%0A${viesti}`
-    window.location.href = `mailto:info@abomarineservice.com?subject=Yhteydenotto – Åbo Marine Service&body=${body}`
-    setSent(true)
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/info@abomarineservice.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          nimi: data.get("nimi"),
+          puhelin: data.get("puhelin"),
+          email: data.get("email"),
+          viesti: data.get("viesti"),
+          _replyto: data.get("email"),
+          _subject: "Yhteydenotto – Åbo Marine Service",
+          _captcha: "false",
+        }),
+      })
+
+      if (!res.ok) throw new Error()
+      form.reset()
+      setSent(true)
+    } catch {
+      setError("Lähetys epäonnistui. Tarkista yhteytesi ja yritä uudelleen.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -49,8 +69,7 @@ export function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-16"
           >
-            <p className="text-2xl font-semibold text-white mb-2">Kiitos viestistäsi!</p>
-            <p className="text-white/60">Otamme yhteyttä pian.</p>
+            <p className="text-2xl font-semibold text-white mb-2">Kiitos! Olemme yhteydessä mahdollisimman pian.</p>
           </motion.div>
         ) : (
           <motion.form
@@ -84,9 +103,10 @@ export function ContactForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/60 mb-2">Sähköposti</label>
+              <label className="block text-sm font-medium text-white/60 mb-2">Sähköposti *</label>
               <input
                 name="email"
+                required
                 type="email"
                 placeholder="sinä@esimerkki.fi"
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-blue-500/60 transition-colors"
@@ -104,11 +124,16 @@ export function ContactForm() {
               />
             </div>
 
+            {error && (
+              <p className="text-red-400 text-sm text-center">{error}</p>
+            )}
+
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:scale-[1.02] transition-transform shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
+              disabled={loading}
+              className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:scale-[1.02] transition-transform shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] disabled:opacity-60 disabled:scale-100"
             >
-              Lähetä viesti <Send className="w-5 h-5" />
+              {loading ? "Lähetetään…" : <><span>Lähetä viesti</span><Send className="w-5 h-5" /></>}
             </button>
           </motion.form>
         )}
