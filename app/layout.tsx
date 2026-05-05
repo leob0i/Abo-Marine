@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella. Liikkuva palvelu lähes 20 vuoden kokemuksella. Volvo Penta, Yanmar, Yamaha ja muut merkit.",
     images: [
       {
-        url: "https://www.abomarineservice.com/og-image.jpg", // lisää 1200×630px kuva /public-kansioon
+        url: "https://www.abomarineservice.com/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Åbo Marine Service Oy – Liikkuva venehuolto Turku",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "Åbo Marine Service Oy – Liikkuva venehuolto Turku",
     description:
       "Ammattitaitoista veneiden ja venemoottoreiden huoltoa Turun alueella lähes 20 vuoden kokemuksella.",
-    images: ["https://www.abomarineservice.com/og-image.jpg"],
+    images: ["https://www.abomarineservice.com/opengraph-image.png"],
   },
 
   // Robots: sallitaan indeksointi täysin
@@ -100,43 +100,21 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.abomarineservice.com",
   name: "Åbo Marine Service Oy",
-  description:
-    "Liikkuva veneiden ja venemoottoreiden huolto- ja korjauspalvelu Turun alueella lähes 20 vuoden kokemuksella.",
   url: "https://www.abomarineservice.com",
   telephone: "+358503511512",
   email: "info@abomarineservice.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Ravurinkatu 29",
-    postalCode: "20380",
     addressLocality: "Turku",
+    postalCode: "20380",
     addressCountry: "FI",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 60.4518,
-    longitude: 22.2666,
-  },
-  areaServed: [
-    { "@type": "City", name: "Turku" },
-    { "@type": "City", name: "Kaarina" },
-    { "@type": "City", name: "Raisio" },
-    { "@type": "City", name: "Naantali" },
-  ],
+  areaServed: ["Turku", "Kaarina", "Raisio", "Naantali"],
+  description:
+    "Ammattitaitoista veneiden ja venemoottoreiden huoltoa lähes 20 vuoden kokemuksella. Liikkuva palvelu Turun saaristossa.",
   priceRange: "€€",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
-    },
-  ],
-  sameAs: [
-    "https://wa.me/358503511512",
-  ],
 };
 
 // ─── ROOT LAYOUT ─────────────────────────────────────────────────────────────

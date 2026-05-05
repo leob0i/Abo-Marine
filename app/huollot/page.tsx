@@ -75,8 +75,6 @@ export default function HuollotPage() {
           </div>
         </div>
 
-        <SeaService />
-
         {/* Osuus 2 – Kaikki merkit */}
         <section className="py-20">
           <div className="container mx-auto px-6 max-w-5xl">
@@ -225,6 +223,8 @@ export default function HuollotPage() {
             </div>
           </div>
         </section>
+
+        <SeaService />
 
         {/* Osuus 1 – intro */}
         <section className="py-8 relative">

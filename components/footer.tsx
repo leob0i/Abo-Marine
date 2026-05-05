@@ -60,6 +60,7 @@ export function Footer() {
           <p>&copy; 2026 Åbo Marine Service Oy. Kaikki oikeudet pidätetään.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
             <Link href="/tietosuoja" className="hover:text-white transition-colors">Tietosuoja ja käyttöehdot</Link>
+            <Link href="https://www.leodigital.fi/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Nettisivut LeoDigital.fi</Link>
           </div>
         </div>
       </div>
