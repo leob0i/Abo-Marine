@@ -17,17 +17,17 @@ export function ContactForm() {
     const data = new FormData(form)
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/info@abomarineservice.com", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
+          access_key: "d6d5a62f-2458-4c33-a139-8d0cb872c65a",
           nimi: data.get("nimi"),
           puhelin: data.get("puhelin"),
           email: data.get("email"),
           viesti: data.get("viesti"),
-          _replyto: data.get("email"),
-          _subject: "Yhteydenotto – Åbo Marine Service",
-          _captcha: "false",
+          replyto: data.get("email"),
+          subject: "Yhteydenotto – Åbo Marine Service",
         }),
       })
 
