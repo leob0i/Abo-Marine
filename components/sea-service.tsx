@@ -21,10 +21,10 @@ export function SeaService() {
           kellon ympäri ja olemme aina valmiit auttamaan! Kiireellisissä
           tapauksissa soita meille numeroon{" "}
           <a
-            href="tel:+358503511512"
+            href="tel:0400242789"
             className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
           >
-            +358 50 351 1512
+            0400242789
           </a>
         </p>
       </div>
@@ -41,11 +41,11 @@ export function SeaService() {
         {/* Call button overlay */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
           <a
-            href="tel:+358503511512"
+            href="tel:0400242789"
             className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-semibold text-base rounded-full shadow-lg transition-colors whitespace-nowrap"
           >
             <Phone className="w-4 h-4 flex-shrink-0" />
-            Soita +358 50 351 1512
+            Soita 0400242789
           </a>
         </div>
       </div>

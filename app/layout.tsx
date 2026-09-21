@@ -105,7 +105,7 @@ const jsonLd = {
       "@id": "https://www.abomarineservice.com/#business",
       name: "Åbo Marine Service Oy",
       url: "https://www.abomarineservice.com",
-      telephone: "+358503511512",
+      telephone: "+358400242789",
       email: "info@abomarineservice.com",
       description:
         "Ammattitaitoista veneiden ja venemoottoreiden huoltoa sekä korjausta Turun alueella. Liikkuva palvelu – tulemme sinne missä veneesi on. Volvo Penta, Yanmar, Yamaha ja muut merkit. Lähes 20 vuoden kokemus.",
@@ -134,7 +134,7 @@ const jsonLd = {
       "@id": "https://www.abomarineservice.com/#organization",
       name: "Åbo Marine Service Oy",
       url: "https://www.abomarineservice.com",
-      telephone: "+358503511512",
+      telephone: "+358400242789",
       email: "info@abomarineservice.com",
       description:
         "Liikkuva venehuolto- ja korjausyritys Turun alueella. Lähes 20 vuoden kokemus venemoottoreiden ja veneiden huollosta.",

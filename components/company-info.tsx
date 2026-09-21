@@ -32,7 +32,7 @@ export function CompanyInfo() {
 
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             <Link
-              href="https://wa.me/358503511512"
+              href="https://wa.me/358400242789"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Avaa WhatsApp ja ota yhteyttä"

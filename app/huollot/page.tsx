@@ -59,7 +59,7 @@ export default function HuollotPage() {
                 className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
               >
                 <a
-                  href="tel:+358503511512"
+                  href="tel:0400242789"
                   className="px-8 py-4 bg-white text-black rounded-full font-semibold text-lg hover:scale-105 transition-all"
                 >
                   Soita
@@ -240,7 +240,7 @@ export default function HuollotPage() {
             </motion.p>
             <div className="flex justify-center mt-8">
               <a
-                href="https://wa.me/358503511512"
+                href="https://wa.me/358400242789"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Avaa WhatsApp ja ota yhteyttä"

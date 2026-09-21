@@ -47,8 +47,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+358503511512" className="hover:text-white transition-colors">
-                  +358 50 351 1512
+                <a href="tel:0400242789" className="hover:text-white transition-colors">
+                  0400242789
                 </a>
               </li>
               <li>Ravurinkatu 29</li>
