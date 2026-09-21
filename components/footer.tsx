@@ -42,8 +42,8 @@ export function Footer() {
             <h4 className="font-semibold mb-6">Yhteystiedot</h4>
             <ul className="space-y-3 text-white/60">
               <li>
-                <a href="mailto:info@abomarineservice.com" className="hover:text-white transition-colors">
-                  info@abomarineservice.com
+                <a href="mailto:tino.veistonen@gmail.com" className="hover:text-white transition-colors">
+                  tino.veistonen@gmail.com
                 </a>
               </li>
               <li>

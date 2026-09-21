@@ -34,7 +34,7 @@ export default function TietosuojaPage() {
                 <div>
                   <h3 className="text-white font-medium mb-2">Rekisterinpitäjä</h3>
                   <p>Abo Marine Service Oy</p>
-                  <p>info@abomarineservice.com</p>
+                  <p>tino.veistonen@gmail.com</p>
                 </div>
 
                 <div>

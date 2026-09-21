@@ -21,7 +21,7 @@ export function ContactForm() {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          access_key: "d6d5a62f-2458-4c33-a139-8d0cb872c65a",
+          access_key: "afa44afd-7d58-432d-a5bb-efe3b4a89eda",
           nimi: data.get("nimi"),
           puhelin: data.get("puhelin"),
           email: data.get("email"),
